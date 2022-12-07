@@ -13,6 +13,9 @@ z-index: -1;
 color: white;
 
 }
+.over{
+  z-index: 1;
+}
 .background{
   position: absolute;
   width: 100%;

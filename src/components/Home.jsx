@@ -3,14 +3,19 @@ import { Container, Row, Col, Carousel, Form } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import City from "../components/City";
 import { useJsApiLoader, GoogleMap } from "@react-google-maps/api";
+let center = { lat: 22, lng: 1 };
+
 const Home = () => {
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: "AIzaSyDV15n9CXg32JcX8-dgqNbO5xDZvrBTDAc",
   });
   const [query, setQuery] = useState("London");
   const [city, setPlace] = useState(null);
-  const center = { lat: city.coord.lat, lng: city.coord.lon };
-
+  //
+  if (city !== null) {
+    center = { lat: city.coord.lat, lng: city.coord.lon };
+  } else {
+  }
   const baseEndpoint = "https://api.openweathermap.org/data/2.5/weather?q=";
 
   const handleChange = (e) => {
@@ -18,20 +23,20 @@ const Home = () => {
     console.log(query);
   };
   let currentCity =
-    baseEndpoint + query + "&appid=f2cffe2e2b80bbdbfa0d0e41aafec69a";
+    baseEndpoint + query + "&appid=42372aeff5d6aa80307f012ca5f40f85";
   console.log(currentCity);
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       const response = await fetch(
-        baseEndpoint + query + "&appid=f2cffe2e2b80bbdbfa0d0e41aafec69a"
+        baseEndpoint + query + "&appid=42372aeff5d6aa80307f012ca5f40f85"
       );
       if (response.ok) {
         const data = await response.json();
         console.log(data);
         console.log(
-          baseEndpoint + query + "&appid=f2cffe2e2b80bbdbfa0d0e41aafec69a"
+          baseEndpoint + query + "&appid=42372aeff5d6aa80307f012ca5f40f85"
         );
         setPlace(data);
         console.log("VERIFICATION" + city);

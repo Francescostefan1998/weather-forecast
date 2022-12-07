@@ -18,7 +18,7 @@ function App() {
     <BrowserRouter>
       <div className="coll">
         <div className="background"></div>
-        <div>
+        <div className="over">
           <CustomNavbar />
           {/*AIzaSyDV15n9CXg32JcX8-dgqNbO5xDZvrBTDAc*/}
           <Routes>
