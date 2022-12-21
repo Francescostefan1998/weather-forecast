@@ -36,7 +36,7 @@ const CustomNavbar = () => {
                   : "nav-link"
               }
             >
-              Forecast
+              Detail
             </div>
           </Link>
           <Link to="/video" className="navbar-links">
@@ -67,7 +67,7 @@ const CustomNavbar = () => {
                   : "nav-link"
               }
             >
-              Details
+              Forecast
             </div>
           </Link>
           <Link to="/settings" className="navbar-links">

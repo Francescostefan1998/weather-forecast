@@ -25,7 +25,7 @@ const Forecast = ({ city }) => {
 
   return (
     <Container>
-      <h1>Forecast</h1>
+      <h1>Welcome to {city}</h1>
       <div id="main-big-image">
         {image && <img alt="img" src={image.urls.raw} />}
       </div>
