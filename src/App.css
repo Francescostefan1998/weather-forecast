@@ -5,6 +5,7 @@
 .coll{
   text-align: center;
   height: 100vh;
+overflow: scroll;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -13,6 +14,7 @@ z-index: -1;
 color: white;
 
 }
+
 .over{
   z-index: 1;
 }
@@ -102,7 +104,47 @@ a.navbar-links:hover {
 .App-link {
   color: #61dafb;
 }
+.image-absolute{
+  width: 20vh;
+  height: 20vh;
+  position: absolute;
+  left: 20%;
+top: 0%
+}
+.image-absolute-cloud{
+  width: 20vh;
+  height: 20vh;
+  position: absolute;
+  right: 20%;
+bottom: 10%
+}
+.image-absolute-cloud img{
+  height: 100%;
+  object-fit: cover;
+}
+.image-absolute img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
+#position-fixed-sidebar{
+  transform: translateX(-400px);
+  transition-duration: 1s;
+}
+     #position-fixed{
+      transform: translateX(-400px);
+      transition-duration: 1s;
+     }
+    
+#discoverMoreStyle{
+transform: translateX(0px);
+transition-duration: 1s;
+}
+#position-not{
+  transform: translateX(00px);
+  transition-duration: 1s;
+}
 #main-big-image{
   width: 80%;
   margin-inline: auto;
@@ -115,7 +157,12 @@ margin-top: 50px;
   height: 100%;
   object-fit: cover;
 }
-
+.relative-p{
+  position: relative;
+}
+.inline-space-5{
+  line-height: 5em;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

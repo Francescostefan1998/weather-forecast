@@ -51,7 +51,7 @@ const CustomNavbar = () => {
               Contact
             </div>
           </Link>
-          <Link to="/details:placeId" className="navbar-links">
+          <Link to="/details/:placeId" className="navbar-links">
             <div
               className={
                 location.pathname === "/details:placeId"

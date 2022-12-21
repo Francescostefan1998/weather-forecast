@@ -29,7 +29,10 @@ function App() {
             <Route element={<Forecast city={city} />} path="/forecast" />
             <Route element={<Video />} path="/video" />
             <Route element={<Contact />} path="/contact" />
-            <Route element={<CityDetail />} path="/details/:placeId" />
+            <Route
+              element={<CityDetail citym={city} />}
+              path="/details/:placeId"
+            />
             <Route element={<Settings />} path="/settings" />
             <Route element={<NotFound />} path="*" />
           </Routes>
