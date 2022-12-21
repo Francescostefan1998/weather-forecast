@@ -5,7 +5,7 @@ import City from "../components/City";
 import { useJsApiLoader, GoogleMap } from "@react-google-maps/api";
 let center = { lat: 22, lng: 1 };
 
-const Home = () => {
+const Home = ({ setCity }) => {
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: "AIzaSyDV15n9CXg32JcX8-dgqNbO5xDZvrBTDAc",
   });
@@ -20,6 +20,7 @@ const Home = () => {
 
   const handleChange = (e) => {
     setQuery(e.target.value);
+    setCity(e.target.value);
     console.log(query);
   };
   let currentCity =

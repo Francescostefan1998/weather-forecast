@@ -103,6 +103,19 @@ a.navbar-links:hover {
   color: #61dafb;
 }
 
+#main-big-image{
+  width: 80%;
+  margin-inline: auto;
+height: 60vh;
+overflow: hidden;
+margin-top: 50px;
+}
+#main-big-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
