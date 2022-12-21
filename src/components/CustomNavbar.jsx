@@ -39,15 +39,7 @@ const CustomNavbar = () => {
               Detail
             </div>
           </Link>
-          <Link to="/video" className="navbar-links">
-            <div
-              className={
-                location.pathname === "/video" ? "nav-link active" : "nav-link"
-              }
-            >
-              Video
-            </div>
-          </Link>
+
           <Link to="/contact" className="navbar-links">
             <div
               className={

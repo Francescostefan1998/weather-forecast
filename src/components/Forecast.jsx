@@ -13,7 +13,7 @@ const Forecast = ({ city }) => {
       );
       const data = await response.json();
       const images = data.results;
-      setImage(images[0]);
+      setImage(images);
       console.log(images);
     } catch (error) {
       console.error(error);
@@ -27,7 +27,7 @@ const Forecast = ({ city }) => {
     <Container>
       <h1>Welcome to {city}</h1>
       <div id="main-big-image">
-        {image && <img alt="img" src={image.urls.raw} />}
+        {image && <img alt="img" src={image[0].urls.raw} />}
       </div>
     </Container>
   );
